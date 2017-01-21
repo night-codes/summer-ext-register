@@ -1,0 +1,16 @@
+
+<form id="edit-form">
+	<div>
+		<label for="name" class="required">Name</label>
+		<input type="text" name="name" id="name" value="{{= it.name}}" />
+	</div>
+	<div>
+		<label for="description">Description</label>
+		<textarea name="description" id="description">{{= it.description}}</textarea>
+	</div>
+	<div class="form-footer required">
+		<input type="hidden" name="id" value="{{= it.id}}" />
+		<button type="submit" name="submit">Save</button>
+	</div>
+</form>
+
