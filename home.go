@@ -26,6 +26,7 @@ func (m *homeModule) Register(c *gin.Context) {
 	var user summer.UsersStruct
 	c.Bind(&user)
 	user.Login = user.Email
+	user.Rights = summer.Rights{Groups: []string{"all"}}
 	// user.Disabled = true // if needs moderation
 	if err := panel.Users.Add(user); err != nil {
 		c.String(400, err.Error())
