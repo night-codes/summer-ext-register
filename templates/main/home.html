@@ -22,7 +22,7 @@
 			{{ if eq $user.ID 0 }}
 			<p>Пожалуйста, <a href="{{site "path"}}/sign-in" class="sign-in" >Войдите</a> или <a href="{{site "path"}}/sign-up" class="sign-up">Зарегистрируйтесь</a></p>
 			{{ else }}
-				<p style="font-size: 1.7rem">Приветствую, <b>{{ $user.Login }}</b>!</p>
+				<p style="font-size: 1.7rem">Приветствую, <b>{{ $user.Name }}</b>!</p>
 				<p><a href="/dashboard">Перейти в кабинет</a> или <a href="{{site "path"}}/logout">Выйти</a></p>
 			{{ end }}
 		</div>
