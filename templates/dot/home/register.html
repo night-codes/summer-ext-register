@@ -1,0 +1,13 @@
+<form class="sign-up-form" id="register" method="POST" action="{{= ajaxUrl}}register" >
+	<div><input type="text"  placeholder="Email" required="required" name="email"></div>
+	<div><input type="text"  placeholder="Name" required="required" name="name"></div>
+	<div><input type="password"  placeholder="Password" required="required" name="password" minlength="6"></div>
+	<div><input type="password"  placeholder="Password (repeat)" required="required" name="password2" minlength="6"></div>
+	<div><input type="text"  placeholder="Description" name="notice"></div>
+	<div class="form-footer">
+		<span style="float: left; text-align: left; line-height: 3.5em;">
+			<a href="#"  class="sign-in" ><span class="fa fa-sign-in"></span> Войти в кабинет</a>
+		</span>
+		<button type="submit" >Регистрация</button><br/>
+	</div>
+</form>

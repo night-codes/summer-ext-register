@@ -1,0 +1,67 @@
+#all {
+	padding: 2rem;
+	border-radius: none;
+	margin: 0 auto;
+	background: #fff;
+	color: #555555;
+}
+
+h1 {
+	display: inline-block;
+	background: #FFE794;
+	padding: 1.2rem;
+	border-radius: 0.5rem;
+}
+
+p {
+	padding: 0.2 1.2rem;
+}
+
+#all a {
+	display: inline-block;
+	background: #eeeeee;
+	color: #1D5D94;
+	padding: 0.2rem 0.7rem;
+	border-radius: 0.2rem;
+	text-decoration: none;
+}
+
+#all a:hover {
+	background: #428bca;
+	color: #ffffff;
+}
+
+.w-box {
+	text-align: left;
+	min-width: 22rem;
+}
+
+.w-wrap {
+	background: rgba(66, 139, 202, 0.5);
+}
+
+.w-title, .w-close {
+	background: #FFE794;
+	color: #666666;
+}
+
+.w-close {
+	font-size: 1.4rem;
+	top: 1rem;
+	right: 1rem;
+	opacity: 0.9;
+}
+
+.form-footer {
+	border-top: 0 solid #FFE794;
+	background: #FFE794;
+}
+
+.form-footer a {
+	color: #666666;
+}
+
+.form-footer button {
+	background: #ffffff;
+	color: #666666;
+}
