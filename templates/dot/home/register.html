@@ -1,9 +1,15 @@
 <form class="sign-up-form" id="register" method="POST" action="{{= ajaxUrl}}register" >
-	<div><input type="text"  placeholder="Email" required="required" name="email"></div>
-	<div><input type="text"  placeholder="Name" required="required" name="name"></div>
-	<div><input type="password"  placeholder="Password" required="required" name="password" minlength="6"></div>
-	<div><input type="password"  placeholder="Password (repeat)" required="required" name="password2" minlength="6"></div>
-	<div><input type="text"  placeholder="Description" name="notice"></div>
+	<div><input type="text"  placeholder="Электронная почта" required="required" name="email"></div>
+	<div><input type="text"  placeholder="Имя" required="required" name="name"></div>
+	<div><input type="text"  placeholder="Город проживания" name="city"></div>
+	<div><select name="gender">
+		<option value="">-- Выберите пол --</option>
+		<option value="male">Мужской</option>
+		<option value="female">Женский</option>
+	</select></div>
+	<div><input type="password"  placeholder="Пароль" required="required" name="password" minlength="6"></div>
+	<div><input type="password"  placeholder="Пароль (повтор)" required="required" name="password2" minlength="6"></div>
+	<div><input type="text"  placeholder="Примечание" name="notice"></div>
 	<div class="form-footer">
 		<span style="float: left; text-align: left; line-height: 3.5em;">
 			<a href="#"  class="sign-in" ><span class="fa fa-sign-in"></span> Войти в кабинет</a>
