@@ -9,12 +9,13 @@ type (
 	homeModule struct {
 		summer.Module
 	}
-	userStruct struct {
+	Settings struct {
+		Gender string `form:"gender" json:"gender" bson:"gender"`
+		City   string `form:"city" json:"city" bson:"city"`
+	}
+	UserStruct struct {
 		summer.UsersStruct
-		Settings struct {
-			Gender string `form:"gender" json:"gender" bson:"gender"`
-			City   string `form:"city" json:"city" bson:"city"`
-		}
+		Settings `bson:",inline"`
 	}
 )
 
@@ -30,9 +31,14 @@ var (
 )
 
 func (m *homeModule) Register(c *gin.Context) {
-	user := getUserPost(c)
-	// user.Disabled = true // if needs moderation
-	if err := panel.Users.Add(user); err != nil {
+	user := &UserStruct{}
+	c.Bind(user)
+	user.Login = user.Email
+	user.Rights = summer.Rights{Groups: []string{"all"}}
+
+	// user.Disabled = true // если нужно, посылаем на модерацию !!!
+
+	if err := panel.Users.Add(*toSummerUser(user)); err != nil {
 		c.String(400, err.Error())
 		return
 	}

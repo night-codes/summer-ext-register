@@ -21,7 +21,7 @@ var (
 		NotifyCollection:  "webmastersNotify",
 		DisableFirstStart: true,
 		Path:              "", // application path
-		DBName:            "external-register-project",
+		DBName:            "erp",
 		Views:             "templates/main",
 		ViewsDoT:          "templates/dot", // doT.js templates
 		Files:             "files",         // static files dir

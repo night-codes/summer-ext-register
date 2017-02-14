@@ -1,8 +1,8 @@
 $(function () {
-	$('.sign-in').forceClick(function () { // вход
+	$.tools.forceClick('.sign-in', function () { // вход
 		$.wbox.open('Вход в кабинет вебмастера', window.tplRet('login'));
 	});
-	$('.sign-up').forceClick(function () { // рега
+	$.tools.forceClick('.sign-up', function () { // рега
 		$.wbox.open('Регистрация вебмастера', window.tplRet('register'));
 	});
 

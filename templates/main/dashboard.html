@@ -1,18 +1,29 @@
-
-<p>Dashboard list</p>
+{{ $user := user (site "login")}}
+<h2>Вывод данных из $user:</h2>
 <div class="tablerunner">
 	<table id="maintable">
 		<thead>
 			<tr>
-				<th class="td-short">#</th>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Created</th>
-				<th>Updated</th>
-				<th class="td-short">Actions</th>
+				<th>Имя</th>
+				<th>Email</th>
+				<th>Пол</th>
+				<th>Город</th>
+				<th>Разное</th>
 			</tr>
 		</thead>
 		<tbody>
+			<tr>
+				<td>{{ $user.Name }}</td>
+				<td>{{ $user.Email }}</td>
+				<td>{{ $user.Settings.gender }}</td>
+				<td>{{ $user.Settings.city }}</td>
+				<td>{{ $user.Notice }}</td>
+			</tr>
 		</tbody>
 	</table>
 </div>
+<h2>JSON представление summerUser:</h2>
+<pre>{{ .summerUserJson }}</pre>
+
+<h2>JSON представление <b>user</b>:</h2>
+<pre>{{ .userJson }}</pre>
